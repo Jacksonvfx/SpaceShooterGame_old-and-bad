@@ -14,8 +14,9 @@ function OnBecameInvisible () {
 	Destroy(gameObject);
 }
 
-function OnCollisionEnter()
-	{
+function OnCollisionEnter(other: Collider)
+{
+        if (other.tag == "Player")
 		Destroy(gameObject);
 	}
 function OnTriggerStay(other: Collider) 
