@@ -14,13 +14,14 @@ function OnBecameInvisible () {
 	Destroy(gameObject);
 }
 
-function OnCollisionEnter(other: Collider)
+function OnTriggerEnter(other: Collider)
 {
         if (other.tag == "Player")
 		Destroy(gameObject);
 	}
-function OnTriggerStay(other: Collider) 
+/*function OnTriggerStay(other: Collider) 
     {
         if (other.tag == "PlayerBubble")
             GameMaster.power +=1;
     }
+*/

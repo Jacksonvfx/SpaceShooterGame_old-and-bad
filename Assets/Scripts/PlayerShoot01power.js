@@ -8,10 +8,10 @@ var readyToShoot = true;
 
 function Update () 
 {
-	if (Input.GetKey(fire) && readyToShoot && GameMaster.ammo > 0)
+	if (Input.GetKey(fire) && readyToShoot && GameMaster.power > 999)
 	{
 	    Instantiate(bullet, transform.position,transform.rotation);
-	    GameMaster.ammo -=0.5;
+	    GameMaster.power -= 1000;
 	readyToShoot = false;
 	Invoke("ResetReadyToShoot", fireRate);
 	}

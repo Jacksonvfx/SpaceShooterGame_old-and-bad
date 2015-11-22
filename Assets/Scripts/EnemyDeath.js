@@ -14,9 +14,18 @@ function OnCollisionEnter(bullet : Collision) {
            	GameMaster.currentScore += 1;
            }
     }
-	if(bullet.gameObject.tag == "Missile")
+    if(bullet.gameObject.tag == "Missile")
     {
-           life +=5;
+        life +=5;
+        if(life >= 6)
+        {
+            Destroy(transform.parent.gameObject);
+            GameMaster.currentScore += 1;
+        }
+    }
+    if(bullet.gameObject.tag == "PowerBullet")
+    {
+           life +=10;
            if(life >= 6)
            {
            	Destroy(transform.parent.gameObject);

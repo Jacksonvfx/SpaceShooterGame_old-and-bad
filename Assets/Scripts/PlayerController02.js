@@ -29,18 +29,14 @@ function FixedUpdate () {
     GetComponent.<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent.<Rigidbody>().velocity.x * -tilt);
 }
 
-function OnCollisionEnter(BoxCollider)
-{
-    //Destroy(gameObject);
-    GameMaster.lives -= 1;
-    if (GameMaster.lives < 1)
-    {
-        Destroy(gameObject);
-    }
-}
 
-function OnTriggerStay(other: Collider) 
+function OnTriggerEnter(other: Collider)
     {
         if (other.tag == "EnemyBullet")
-            GameMaster.power +=1;
+           { GameMaster.lives -= 1;
+    if (GameMaster.lives < 1)
+        {
+            Destroy(gameObject);
+        }
     }
+}
