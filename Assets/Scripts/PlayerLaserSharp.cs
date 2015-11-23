@@ -42,7 +42,7 @@ public class PlayerLaserSharp : MonoBehaviour
 						
 						
 					}
-                  // hit.rigidbody.AddForceAtPosition(transform.forward * 10, hit.point);
+                  //hit.rigidbody.AddForceAtPosition(transform.forward * 10, hit.point);
                 }
             }
             else
