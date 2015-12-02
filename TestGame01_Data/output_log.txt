@@ -18,7 +18,7 @@ Loading D:\UnityGames\SpaceShooterGame\TestGame01_Data\Managed\UnityEngine.UI.dl
 Platform assembly: D:\UnityGames\SpaceShooterGame\TestGame01_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading D:\UnityGames\SpaceShooterGame\TestGame01_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\UnityGames\SpaceShooterGame\TestGame01_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.112 seconds
+- Completed reload, in  0.037 seconds
 desktop: 1680x1050 60Hz; virtual: 3360x1050 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -29,6 +29,6 @@ The referenced script on this Behaviour is missing!
 (Filename:  Line: 1649)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1098 -> priority: 1 
-  Thread -> id: 1920 -> priority: 1 
+  Thread -> id: 1a34 -> priority: 1 
+  Thread -> id: 1b44 -> priority: 1 
 Platform assembly: D:\UnityGames\SpaceShooterGame\TestGame01_Data\Managed\Boo.Lang.dll (this message is harmless)

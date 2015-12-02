@@ -6,6 +6,8 @@ using System;
 
 public class PlayerLaserSharp : MonoBehaviour 
 {
+    public GameObject PlayerLaserCollider;
+
     LineRenderer line;
 
     void Start () 
@@ -36,18 +38,17 @@ public class PlayerLaserSharp : MonoBehaviour
             {
 				
 				line.SetPosition(1, hit.point);
-                if(hit.rigidbody)
-                {
-					if(hit.rigidbody.tag=="Enemy"){
-						
-						
-					}
-                  //hit.rigidbody.AddForceAtPosition(transform.forward * 10, hit.point);
-                }
+                if(hit.rigidbody && hit.rigidbody.tag == "Enemy")
+                
+                    {
+                        PlayerLaserCollider = Instantiate(PlayerLaserCollider) as GameObject;
+                        PlayerLaserCollider.transform.position = hit.point;
+                    }
+                  
+                
             }
             else
                 line.SetPosition(1, ray.GetPoint(100));
-
             yield return null;
         }
 

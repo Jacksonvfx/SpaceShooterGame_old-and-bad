@@ -1,5 +1,6 @@
 #pragma strict
 
+var PowerField: GameObject;
 class Boundary
 {
     var xMin : float;
@@ -36,7 +37,8 @@ function OnTriggerEnter(other: Collider)
            { GameMaster.lives -= 1;
     if (GameMaster.lives < 1)
         {
-            Destroy(gameObject);
+        Destroy(gameObject);
+        Destroy(PowerField);
         }
     }
 }
