@@ -27,7 +27,12 @@ public class PlayerSeekingMissile : MonoBehaviour
 		}
 		maxSqrVelocity = maxVelocity*maxVelocity;
 	}
-	
+
+    void OnCollisionEnter(Collision collision) {
+        collision.gameObject.SendMessage("TakeDamage", 5);
+        Destroy(this);
+    }
+
 	// Update is called once per frame
 	void FixedUpdate()
 	{
