@@ -6,13 +6,14 @@ var fire : KeyCode;
 var fireRate = 0.2;
 var readyToShoot = true;
 
-function Update () 
+function Update ()
 {
 	if (Input.GetKey(fire) && readyToShoot)
 	{
-	Instantiate(bullet, transform.position,transform.rotation);
-	readyToShoot = false;
-	Invoke("ResetReadyToShoot", fireRate);
+	    var newBullet = Instantiate(bullet, transform.position,transform.rotation);
+            newBullet.SendMessage('SetDamage', GameMaster.bulletDamage);
+	    readyToShoot = false;
+	    Invoke("ResetReadyToShoot", fireRate);
 	}
 
 }
